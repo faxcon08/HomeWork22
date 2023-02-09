@@ -1,6 +1,4 @@
-import lesson_22.BusDriver;
-import lesson_22.Driver;
-import lesson_22.DriverLicence;
+import lesson_22.*;
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -28,8 +26,8 @@ public class Main {
         Set <Driver> drivers = new HashSet<>();
         drivers.add(new BusDriver("Fist Driver",1));
         drivers.add(new BusDriver("Second Driver", 2));
-        drivers.add(new BusDriver("Third Driver", 3));
-        drivers.add(new BusDriver("Fourth Driver", 4));
+        drivers.add(new CarDriver<>("Third Driver", 3));
+        drivers.add(new TruckDriver("Fourth Driver", 4));
         drivers.add(new BusDriver("Fifth Driver", 5));
 
         printSeparator("First Task");
@@ -37,7 +35,6 @@ public class Main {
         printSeparator("");
 
         System.out.println("Try to add the same Driver");
-        drivers.add(new BusDriver("Fourth Driver", 4));
         drivers.add(new BusDriver("Fifth Driver", 5));
         printDrivers(drivers);
 
